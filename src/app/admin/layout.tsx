@@ -1,6 +1,5 @@
+import AdminSidebar from "@/components/admin/AdminSidebar";
 import type { Metadata } from "next";
-// import AdminNavbar from "@/components/admin/AdminNavbar/AdminNavbar";
-// import AdminContentLayout from "@/components/admin/layouts/AdminContentLayout";
 
 export const metadata: Metadata = {
   title: "Admin Panel",
@@ -17,10 +16,12 @@ export default function RootLayout({
       {/* Admin Navbar */}
       {/* <AdminNavbar /> */}
 
+      {/* Admin Sidebar */}
+      <AdminSidebar />
+
       {/* Admin Content Layout */}
       {/* <AdminContentLayout>{children}</AdminContentLayout> */}
-
-      {children}
+      <main className="p-2 w-full">{children}</main>
     </>
   );
 }
