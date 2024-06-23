@@ -15,6 +15,7 @@ import {
   TicketPercent,
   Layers,
   Flag,
+  ChevronLeft,
 } from "lucide-react";
 
 import { useWindowWidth } from "@react-hook/window-size";
@@ -43,7 +44,7 @@ export default function SideNavbar({}: Props) {
           variant="secondary"
           className=" rounded-full p-2"
         >
-          <ChevronRight />
+          {isCollapsed ? <ChevronRight /> : <ChevronLeft />}
         </Button>
       </div>
       <Nav

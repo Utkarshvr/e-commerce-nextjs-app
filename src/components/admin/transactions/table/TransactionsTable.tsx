@@ -17,76 +17,52 @@ import {
 } from "@/components/ui/table";
 
 import { Button } from "@/components/ui/button";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { MoreHorizontal } from "lucide-react";
+import StatusBadge from "../StatusBadge";
 
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 type CategoryType = {
-  id: string;
-  name: string;
+  transactionId: string;
+  orderId: string;
+  customerId: string;
+  timeStrap: string;
+  paymentMode: string;
+  status: string;
 };
 
 const columns: ColumnDef<CategoryType>[] = [
   {
-    accessorKey: "id",
-    header: "Category ID",
+    accessorKey: "transactionId",
+    header: "Transaction ID",
   },
   {
-    accessorKey: "name",
-    header: "Category Name",
+    accessorKey: "orderId",
+    header: "Order ID",
   },
   {
-    id: "actions",
-    header: "Actions",
+    accessorKey: "customerId",
+    header: "Customer ID",
+  },
+  {
+    accessorKey: "timeStrap",
+    header: "TimeStrap",
+  },
+  {
+    accessorKey: "paymentMode",
+    header: "Payment Mode",
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
     cell: ({ row }) => {
-      const category = row.original;
+      const transaction = row.original;
 
-      return (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            {/* <DropdownMenuLabel>Actions</DropdownMenuLabel> */}
-            <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(category.id)}
-            >
-              Copy Category ID
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Edit</DropdownMenuItem>
-            <DropdownMenuItem>Delete</DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      );
+      return <StatusBadge status={transaction.status} />;
     },
   },
 ];
 
-const data = [
-  { id: "1", name: "Boys(25)" },
-  { id: "2", name: "Boys > Shirts > Tshirts(11)" },
-  { id: "3", name: "Boys > Shirts > Tshirts(11)" },
-  { id: "4", name: "Boys > Shirts > Tshirts(11)" },
-  { id: "5", name: "Boys > Shirts > Tshirts(11)" },
-  { id: "6", name: "Boys > Shirts > Tshirts(11)" },
-  { id: "7", name: "Boys > Shirts > Tshirts(11)" },
-  { id: "8", name: "Boys > Shirts > Tshirts(11)" },
-];
-
-export default function CategoriesTable() {
+export default function TransactionsTable({ data }: { data: any[] }) {
   const table = useReactTable({
     data,
     columns,
