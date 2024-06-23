@@ -1,8 +1,6 @@
 import CategoriesTable from "@/components/admin/categories/CategoriesTable/CategoriesTable";
-import { Payment, columns } from "./columns";
-import { DataTable } from "./data-table";
 
-async function getData(): Promise<Payment[]> {
+async function getData(): Promise<any[]> {
   // Fetch data from your API here.
   return [
     {
