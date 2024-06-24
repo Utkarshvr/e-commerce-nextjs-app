@@ -22,6 +22,7 @@ import { useWindowWidth } from "@react-hook/window-size";
 import { Button } from "../ui/button";
 import { Nav } from "../ui/nav";
 import { ThemeToggle } from "../theme/ThemeToggle";
+import UserMenu from "./others/UserMenu";
 
 export default function SideNavbar({}: Props) {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -34,12 +35,15 @@ export default function SideNavbar({}: Props) {
   }
 
   return (
-    <div className="relative min-w-[80px] border-r px-6  pb-10 pt-12 flex flex-col justify-between">
-      {/* <ThemeToggle /> */}
-      <p className="text-xs">(todo)</p>
+    <div
+      className={`relative min-w-[80px] border-r ${
+        isCollapsed ? "px-0" : "px-3"
+      }  pb-10 pt-16 flex flex-col items-center justify-between`}
+    >
+      <UserMenu />
 
       <div
-        className={`absolute right-[-20px] top-7 ${
+        className={`absolute right-[-20px] top-4 ${
           mobileWidth ? "hidden" : "visible"
         }`}
       >
