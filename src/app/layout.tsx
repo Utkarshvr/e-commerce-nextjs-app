@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { ThemeProvider } from "@/providers/ThemeProvider";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -17,10 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen w-full flex bg-white text-black",
+          "min-h-screen w-full flex",
           montserrat.className,
 
           {
@@ -28,7 +29,14 @@ export default function RootLayout({
           }
         )}
       >
-        <TooltipProvider>{children}</TooltipProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <TooltipProvider>{children}</TooltipProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
