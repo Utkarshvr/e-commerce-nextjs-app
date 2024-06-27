@@ -26,7 +26,7 @@ export default function StatusBadge({ status }: Props) {
 
   return (
     <>
-      <Badge variant={"default"} style={{ backgroundColor }}>
+      <Badge variant={"default"} className="w-max" style={{ backgroundColor }}>
         {status}
       </Badge>
     </>
