@@ -88,7 +88,8 @@ export default function page({}: Props) {
                 quality={100}
                 // style={{ width: 120, height: 80 }}
                 src={
-                  "https://w7.pngwing.com/pngs/826/253/png-transparent-t-shirt-polo-shirt-clothing-sleeve-black-t-shirt-black-crew-neck-t-shirt-tshirt-fashion-cloth-thumbnail.png"
+                  "/cloth.png"
+                  // "https://w7.pngwing.com/pngs/826/253/png-transparent-t-shirt-polo-shirt-clothing-sleeve-black-t-shirt-black-crew-neck-t-shirt-tshirt-fashion-cloth-thumbnail.png"
                 }
                 alt="Image"
               />
