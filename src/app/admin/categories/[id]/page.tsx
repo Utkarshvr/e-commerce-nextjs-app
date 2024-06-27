@@ -1,5 +1,8 @@
-import EditGeneralCategoryForm from "@/components/admin/categories/edit-category/EditGeneralCategoryForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+import EditAttributeCategoryForm from "@/components/admin/categories/edit-category/EditAttributeCategoryForm";
+import EditFiltersCategoryForm from "@/components/admin/categories/edit-category/EditFiltersCategoryForm";
+import EditGeneralCategoryForm from "@/components/admin/categories/edit-category/EditGeneralCategoryForm";
 
 type Props = {};
 
@@ -18,9 +21,11 @@ export default function page({}: Props) {
           <EditGeneralCategoryForm />
         </TabsContent>
         <TabsContent value="attribute-groups">
-          Change your password here.
+          <EditAttributeCategoryForm />
         </TabsContent>
-        <TabsContent value="filters">Change your password here.</TabsContent>
+        <TabsContent value="filters">
+          <EditFiltersCategoryForm />
+        </TabsContent>
       </Tabs>
     </div>
   );
