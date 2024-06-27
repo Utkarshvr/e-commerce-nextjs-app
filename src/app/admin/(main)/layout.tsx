@@ -1,3 +1,4 @@
+import AdminSidebar from "@/components/admin/AdminSidebar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,5 +11,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <>
+      {/* Admin Sidebar */}
+      <AdminSidebar />
+
+      {/* Admin Content */}
+      <main className="p-2 w-full">{children}</main>
+    </>
+  );
 }
