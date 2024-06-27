@@ -67,7 +67,7 @@ export default function EditFiltersCategoryForm({}: Props) {
             </form>
             <div className="flex gap-3">
               {["M", "SM", "L", "S", "XL"].map((size) => (
-                <div className="relative p-2 w-8 h-8 flex items-center justify-center rounded-full bg-slate-800">
+                <div className="relative p-2 w-8 h-8 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800">
                   <p className="text-sm font-bold">{size}</p>
                   <Button
                     className="w-4 h-4 rounded-full absolute top-[-4px] right-[-4px]"
