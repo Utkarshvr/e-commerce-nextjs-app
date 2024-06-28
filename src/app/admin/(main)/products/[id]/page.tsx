@@ -1,4 +1,11 @@
+import EditAttributesProductForm from "@/components/admin/products/edit-product/EditAttributesProductForm";
+import EditDiscountProductForm from "@/components/admin/products/edit-product/EditDiscountProductForm";
+import EditGeneralProductForm from "@/components/admin/products/edit-product/EditGeneralProductForm";
+import EditImagesProductForm from "@/components/admin/products/edit-product/EditImagesProductForm";
+import EditOptionsProductForm from "@/components/admin/products/edit-product/EditOptionsProductForm";
+import EditReviewsProductForm from "@/components/admin/products/edit-product/EditReviewsProductForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 type Props = {};
 
 export default function page({}: Props) {
@@ -15,22 +22,22 @@ export default function page({}: Props) {
           <TabsTrigger value="reviews">Reviews</TabsTrigger>
         </TabsList>
         <TabsContent value="general">
-          <p>Content here</p>{" "}
+          <EditGeneralProductForm />
         </TabsContent>
         <TabsContent value="attributes">
-          <p>Content here</p>{" "}
+          <EditAttributesProductForm />
         </TabsContent>
         <TabsContent value="options">
-          <p>Content here</p>{" "}
+          <EditOptionsProductForm />
         </TabsContent>
         <TabsContent value="discount">
-          <p>Content here</p>{" "}
+          <EditDiscountProductForm />
         </TabsContent>
         <TabsContent value="images">
-          <p>Content here</p>{" "}
+          <EditImagesProductForm />
         </TabsContent>
         <TabsContent value="reviews">
-          <p>Content here</p>{" "}
+          <EditReviewsProductForm />
         </TabsContent>
       </Tabs>
     </div>
