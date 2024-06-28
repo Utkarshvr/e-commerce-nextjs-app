@@ -21,11 +21,11 @@ export default function EditGeneralProductForm({}: Props) {
     <div className="flex gap-[36px]">
       <div className="flex flex-[0.5] flex-col gap-3">
         <Wrapper>
-          <Label>Category Name</Label>
+          <Label>Product Name</Label>
           <Input type="text" placeholder="T-Shirt" />
         </Wrapper>
         <Wrapper>
-          <Label>Parent Category</Label>
+          <Label>Parent Categories</Label>
           <Select>
             <SelectTrigger>
               <SelectValue placeholder="Select Parent Category" />
@@ -37,26 +37,46 @@ export default function EditGeneralProductForm({}: Props) {
           </Select>
         </Wrapper>
         <Wrapper>
-          <Label>Meta Tag Title</Label>
-          <Input type="text" placeholder="T-Shirt" />
+          <Label>Breif Description</Label>
+          <Input type="text" placeholder="Some description here" />
         </Wrapper>
         <Wrapper>
-          <Label>Meta Tag Name</Label>
-          <Input type="text" placeholder="T-Shirt" />
+          <Label>Full Description</Label>
+          <Input type="text" placeholder="Some description here" />
+        </Wrapper>
+        <Wrapper>
+          <Label>Max Retail Price</Label>
+          <Input type="text" placeholder="Some description here" />
+        </Wrapper>
+        <Wrapper>
+          <Label>Minimum Order Quantity</Label>
+          <Input type="text" placeholder="Some description here" />
         </Wrapper>
       </div>
       <div className="flex flex-[0.5] flex-col gap-3">
         <Wrapper>
+          <Label>Shipping Price</Label>
+          <Textarea placeholder="Some description here." />
+        </Wrapper>
+        <Wrapper>
+          <Label>Product Status</Label>
+          <Textarea placeholder="Some description here." />
+        </Wrapper>
+        <Wrapper>
+          <Label>Meta Tag Title</Label>
+          <Textarea placeholder="Disabled" />
+        </Wrapper>
+        <Wrapper>
+          <Label>Meta Tag Keyword</Label>
+          <Textarea placeholder="Disabled" />
+        </Wrapper>
+        <Wrapper>
           <Label>Meta Tag Description</Label>
-          <Textarea placeholder="Some description here." />
+          <Textarea placeholder="desc..." />
         </Wrapper>
         <Wrapper>
-          <Label>Category description</Label>
-          <Textarea placeholder="Some description here." />
-        </Wrapper>
-        <Wrapper>
-          <Label>Category Image</Label>
-          <Textarea placeholder="Some description here." />
+          <Label>Quantity in Stock</Label>
+          <Textarea placeholder="desc..." />
         </Wrapper>
       </div>
     </div>

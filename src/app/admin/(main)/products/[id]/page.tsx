@@ -31,7 +31,9 @@ export default function page({}: Props) {
           <EditOptionsProductForm />
         </TabsContent>
         <TabsContent value="discount">
-          <EditDiscountProductForm />
+          <div className="w-full h-full flex items-center justify-center">
+            <EditDiscountProductForm />
+          </div>
         </TabsContent>
         <TabsContent value="images">
           <EditImagesProductForm />
