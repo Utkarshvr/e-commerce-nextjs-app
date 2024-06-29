@@ -12,7 +12,7 @@ type Props = {};
 
 export default function AttributeCard({}: Props) {
   return (
-    <Card className="min-w-[250px]">
+    <Card className="min-w-[220px]">
       <CardHeader>
         <CardTitle>T-Shirt</CardTitle>
       </CardHeader>

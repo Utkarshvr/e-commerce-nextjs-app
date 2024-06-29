@@ -36,7 +36,7 @@ export default function SideNavbar({}: Props) {
 
   return (
     <div
-      className={`sticky top-0 left-0 min-w-[80px] max-h-screen border-r ${
+      className={`sticky top-0 left-0 bg-white dark:bg-slate-950 z-50 min-w-[80px] max-h-screen border-r ${
         isCollapsed ? "px-0" : "px-3"
       }  pb-10 pt-16 flex flex-col items-center justify-between`}
     >

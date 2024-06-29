@@ -10,7 +10,7 @@ type Props = {};
 
 export default function page({}: Props) {
   return (
-    <div className="container mx-auto py-10">
+    <div className="mx-auto">
       <h1 className="text-3xl font-bold mb-2">Edit Product</h1>
       <Tabs defaultValue="general">
         <TabsList className="mb-4">

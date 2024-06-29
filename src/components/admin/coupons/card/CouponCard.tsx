@@ -22,7 +22,7 @@ type Props = {};
 
 export default function CouponCard({}: Props) {
   return (
-    <Card className="min-w-[250px]">
+    <Card className="min-w-[220px]">
       <CardHeader className="flex-row  gap-4 justify-between items-center">
         <CardTitle>Diwali Discount</CardTitle>
 

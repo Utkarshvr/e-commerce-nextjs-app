@@ -11,7 +11,7 @@ import { Plus } from "lucide-react";
 
 export default function page() {
   return (
-    <div className="h-full container mx-auto py-10">
+    <div className="h-full mx-auto">
       <h1 className="text-3xl font-bold mb-2">Edit Attribute</h1>
       <div className="flex h-full items-center justify-center">
         <Card className="min-w-[400px]">

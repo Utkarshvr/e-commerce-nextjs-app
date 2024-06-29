@@ -17,7 +17,7 @@ export default function RootLayout({
       <AdminSidebar />
 
       {/* Admin Content */}
-      <main className="p-2 w-full">{children}</main>
+      <main className="container overflow-x-scroll py-10 w-full">{children}</main>
     </>
   );
 }

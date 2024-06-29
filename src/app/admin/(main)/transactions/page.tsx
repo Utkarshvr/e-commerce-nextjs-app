@@ -66,7 +66,7 @@ export default async function DemoPage() {
   const data = await getData();
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="mx-auto">
       <h1 className="text-3xl font-bold mb-2">Transactions</h1>
       <TransactionsTable data={data} />
     </div>

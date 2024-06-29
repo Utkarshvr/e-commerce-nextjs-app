@@ -18,7 +18,7 @@ export default async function Page() {
   const data = await getData();
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="max-w-full mx-auto">
       <h1 className="text-3xl font-bold mb-2">Orders</h1>
       <OrdersTable data={data} />
     </div>
